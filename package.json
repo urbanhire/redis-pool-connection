@@ -1,0 +1,34 @@
+{
+  "name": "redis-pool-connection",
+  "version": "1.0.0",
+  "description": "Re-use a single or pool of redis connections across several modules/files in your app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.test.js"
+  },
+  "keywords": [
+    "redis",
+    "connection",
+    "pool"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/urbanhire/redis-pool-connection.git"
+  },
+  "author": "Urbanhire.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urbanhire/redis-pool-connection/issues"
+  },
+  "homepage": "https://github.com/urbanhire/redis-pool-connection#readme",
+  "dependencies": {
+    "lodash.result": "^4.3.0",
+    "redis": "^2.6.0-1"
+  },
+  "devDependencies": {
+    "decache": "^3.0.3",
+    "env2": "^2.0.4",
+    "istanbul": "^0.4.2",
+    "tape": "^4.4.0"
+  }
+}
