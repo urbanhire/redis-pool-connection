@@ -1,6 +1,6 @@
 {
   "name": "redis-pool-connection",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Re-use a single or pool of redis connections across several modules/files in your app.",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,12 @@
   "dependencies": {
     "lodash.result": "^4.5.2",
     "redis": "^2.6.3"
+  },
+  "standard": {
+    "ignore": [
+      "/test/*.js",
+      "**/*.opts"
+    ]
   },
   "devDependencies": {
     "decache": "^3.0.3",

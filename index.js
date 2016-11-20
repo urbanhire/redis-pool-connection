@@ -2,29 +2,29 @@ var redis = require('redis')
 var result = require('lodash.result')
 var CON = {} // store redis connections as Object
 
-function new_connection (conf) {
-  var redis_con = redis.createClient(conf)
+function newConnection (conf) {
+  var redisConnection = redis.createClient(conf)
   if (result(conf, 'options.db')) {
-    redis_con.select(conf.options.db)
+    redisConnection.select(conf.options.db)
   }
 
-  redis_con.on('error', function (err) {
+  redisConnection.on('error', function (err) {
     console.error('Error ' + err)
   })
 
-  return redis_con
+  return redisConnection
 }
 
-function redis_connection (options, type) {
+function redisPoolConnection (options, type) {
   type = type || 'DEFAULT' // allow infinite types of connections
 
   if (!CON[type] || !CON[type].connected) {
-    CON[type] = new_connection(options)
+    CON[type] = newConnection(options)
   }
   return CON[type]
 }
 
-module.exports = redis_connection
+module.exports = redisPoolConnection
 
 module.exports.kill = function (type) {
   type = type || 'DEFAULT' // kill specific connection or default one
