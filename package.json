@@ -1,6 +1,6 @@
 {
   "name": "redis-pool-connection",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Re-use a single or pool of redis connections across several modules/files in your app.",
   "main": "index.js",
   "scripts": {
