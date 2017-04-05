@@ -1,6 +1,7 @@
-var redis = require('redis')
-var result = require('lodash.result')
-var CON = {} // store redis connections as Object
+const redis = require('redis')
+require('redis-delete-wildcard')(redis)
+const result = require('lodash.result')
+const CON = {} // store redis connections as Object
 
 function newConnection (conf) {
   var redisConnection = redis.createClient(conf)

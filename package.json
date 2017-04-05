@@ -23,7 +23,8 @@
   "homepage": "https://github.com/urbanhire/redis-pool-connection#readme",
   "dependencies": {
     "lodash.result": "^4.5.2",
-    "redis": "^2.6.3"
+    "redis": "^2.6.3",
+    "redis-delete-wildcard": "0.0.3"
   },
   "standard": {
     "ignore": [
